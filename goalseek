@@ -1,0 +1,54 @@
+function myFunction() {
+  
+  var app = SpreadsheetApp;
+  var activeSheet = app.getActiveSpreadsheet().getActiveSheet();
+  var tol =.001
+  var seedVar = activeSheet.getRange(18, 9).getValue();
+  var seedCheck = activeSheet.getRange(18, 8).getValue();
+  var aVar = activeSheet.getRange(18, 12).getValue();
+  var aCheck = activeSheet.getRange(18, 11).getValue();
+  var bVar = activeSheet.getRange(18, 15).getValue();
+  var bCheck = activeSheet.getRange(18, 14).getValue();  
+  var cVar = activeSheet.getRange(18, 18).getValue();
+  var cCheck = activeSheet.getRange(18, 17).getValue(); 
+  var dVar = activeSheet.getRange(18, 21).getValue();
+  var dCheck = activeSheet.getRange(18, 20).getValue();   
+  
+  activeSheet.getRange(19, 9).setValue("");
+  activeSheet.getRange(19, 12).setValue("");
+  activeSheet.getRange(19, 15).setValue("");
+  activeSheet.getRange(19, 21).setValue("");
+  
+  if(seedVar > -(tol) && seedVar < (tol)){
+    activeSheet.getRange(19, 9).setValue("in");
+  } else {
+    activeSheet.getRange(18, 7).setValue(seedCheck);
+  }
+
+  if(aVar > -(tol) && aVar < (tol)){
+    activeSheet.getRange(19, 12).setValue("in");
+  } else {
+    activeSheet.getRange(18, 10).setValue(aCheck);
+  }
+
+  if(bVar > -(tol) && bVar < (tol)){
+    activeSheet.getRange(19, 15).setValue("in");
+  } else {
+    activeSheet.getRange(18, 13).setValue(bCheck);
+  }
+  
+  if(cVar > -(tol) && cVar < (tol)){
+    activeSheet.getRange(19, 18).setValue("in");
+  } else {
+    activeSheet.getRange(18, 16).setValue(cCheck);
+  }
+  
+  if(dVar > -(tol) && dVar < (tol)){
+    activeSheet.getRange(19, 21).setValue("in");
+  } else {
+    activeSheet.getRange(18, 19).setValue(dCheck);
+  }
+  
+  
+  
+}
