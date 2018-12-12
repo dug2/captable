@@ -49,6 +49,4 @@ function myFunction() {
     activeSheet.getRange(18, 19).setValue(dCheck);
   }
   
-  
-  
 }
